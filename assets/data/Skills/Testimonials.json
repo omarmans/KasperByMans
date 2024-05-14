@@ -1,0 +1,32 @@
+[
+  {
+    "img": "skills-01.jpg",
+    "p": "Great company! Top-notch services and excellent customer support. Highly recommended! ",
+    "name": "John Doe,ceo"
+  },
+  {
+    "img": "skills-02.jpg",
+    "p": " KB Company delivers exceptional quality and reliability. Their products exceed expectations everytime",
+    "name": " Emily Johnson"
+  },
+  {
+    "img": "skills-03.jpg",
+    "p": "Impressed by KB's professionalism and commitment to customer satisfaction. A leader in their industry",
+    "name": " Michael Brown"
+  },
+  {
+    "img": "skills-04.jpg",
+    "p": "KB sets the standard for excellence in their field. Their dedication to innovation is unparalleled",
+    "name": "Sarah Thompson"
+  },
+  {
+    "img": "skills-05.jpg",
+    "p": "  KB Company stands out for its integrity and reliability. Their team goes the extra mile to ensure client success.",
+    "name": "Jennifer Lee"
+  },
+  {
+    "img": "skills-06.jpg",
+    "p": " Thrilled with KB's products and services. They consistently go above and beyond to meet customer needs",
+    "name": "David Wilson"
+  }
+]

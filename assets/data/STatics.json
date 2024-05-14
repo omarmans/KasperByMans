@@ -1,0 +1,22 @@
+[
+  {
+    "i": "fas fa-mug-hot",
+    "number": 1236,
+    "p": "Coffee Drinks"
+  },
+  {
+    "i": "far fa-folder",
+    "number": 256,
+    "p": "Completed Projects"
+  },
+  {
+    "i": "far fa-envelope",
+    "number": 1836,
+    "p": "Mail Sent"
+  },
+  {
+    "i": "fas fa-trophy",
+    "number": 436,
+    "p": "Awards Received"
+  }
+]
