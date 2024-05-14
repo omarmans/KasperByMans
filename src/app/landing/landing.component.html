@@ -1,0 +1,34 @@
+<div
+  class="landing"
+  #land
+  [ngStyle]="{
+    'background-image': 'url(assets/land/' + backGr[current] + ')'
+  }"
+>
+  <div class="overlay"></div>
+  <div class="text">
+    <div class="content">
+      <h2>
+        Hello world <br />
+        We Are Kasper We Make It
+      </h2>
+      <p>
+        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
+        blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet
+        quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet
+        elit, eget tincidunt.
+      </p>
+    </div>
+  </div>
+  <i class="fas fa-angle-left change-background fa-2x left" (click)="plus()">
+  </i>
+  <i class="fas fa-angle-right change-background fa-2x right" (click)="minus()">
+  </i>
+  <div>
+    <!-- <ul class="bullets" >
+      <li (click)="plus()"></li>
+      <li class="active"></li>
+      <li (click)="minus()"></li>
+    </ul> -->
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="Statistics" #number>
+  <div class="conatiner">
+    <div class="box" *ngFor="let box of Statistics">
+      <i class="{{ box.i }}"></i>
+      <div class="number" attr.data-goal="{{ box.number }}">
+        {{ box.number }}
+      </div>
+
+      <p>{{ box.p }}</p>
+    </div>
+  </div>
+</div>

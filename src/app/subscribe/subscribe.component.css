@@ -1,0 +1,70 @@
+.sub {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../../assets/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+}
+.sub::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.sub .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+@media (max-width: 991px) {
+  .sub .container {
+    flex-direction: column;
+  }
+  .sub .container p {
+    text-align: center;
+    line-height: 2;
+  }
+}
+.sub .container form {
+  display: flex;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+}
+.sub .container form i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+.sub .container form input:focus {
+  outline: none;
+}
+.sub .container form input[type=email] {
+  border: 1px solid white;
+  background: none;
+  padding: 20px 20px 20px 60px;
+  width: calc(100% - 130px);
+  caret-color: #19c8fa;
+  border-right: none;
+}
+.sub .container form input[type=submit] {
+  width: 130px;
+  padding: 10px 20px;
+  background-color: #19c8fa;
+  border: 1px solid white;
+  color: white;
+  outline: none;
+  margin-right: 10px;
+  text-transform: uppercase;
+  border-left: none;
+}
+.sub .container form input[type=submit]:hover {
+  letter-spacing: 1.5px;
+  background-color: rgb(103, 217, 179);
+  cursor: pointer;
+}/*# sourceMappingURL=subscribe.component.css.map */

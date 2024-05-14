@@ -1,0 +1,55 @@
+<div class="Skills" #Ski_Sec>
+  <div class="container">
+    <div class="testimonials">
+      <h3>Testimonials</h3>
+      <p>
+        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
+        blandit aliquet elit, egettincidunnibh pulvinar a. Curabitur aliquet
+        quam
+      </p>
+
+      <div class="content" *ngFor="let Testimonial of Filterd_Testimonials">
+        <img src="assets/skill/{{ Testimonial.img }}" alt="" />
+        <div class="text">
+          {{ Testimonial.p }}
+          <p>{{ Testimonial.name }}</p>
+        </div>
+      </div>
+
+      <ul class="bullets">
+        <li
+          (click)="Slice(0, 2); active_IND = 0"
+          [ngClass]="{ active: active_IND === 0 }"
+        ></li>
+        <li
+          (click)="Slice(2, 4); active_IND = 1"
+          [ngClass]="{ active: active_IND === 1 }"
+        ></li>
+        <li
+          (click)="Slice(4, 6); active_IND = 2"
+          [ngClass]="{ active: active_IND === 2 }"
+        ></li>
+      </ul>
+    </div>
+    <!-- ############################# -->
+    <div class="our-skills" #skill_sec>
+      <h3>Our-Skills</h3>
+      <p>
+        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris
+        blandit aliquet elit, egettincidunnibh pulvinar a. Curabitur aliquet
+        quam
+      </p>
+      <div #prg class="prog-holder" *ngFor="let skill of Skills">
+        <h4>{{ skill.skill | uppercase }}</h4>
+        <div class="prog">
+          <span
+            [ngStyle]="{
+              width: grow_smozzy ? skill.dataProgress : '0%',
+            }"
+            [attr.data-progress]="grow_smozzy ? skill.dataProgress : '0%'"
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

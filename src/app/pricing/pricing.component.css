@@ -1,0 +1,135 @@
+.main-heading {
+  text-align: center;
+}
+
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  width: 120px;
+}
+
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  bottom: -38px;
+  background-color: white;
+}
+
+.main-heading p {
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  color: #777;
+}
+
+a {
+  cursor: pointer;
+}
+
+.pricing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.pricing .container .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.pricing .container .plans .plan {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+.pricing .container .plans .plan .head {
+  padding: 40px 20px;
+  border-top: 1px solid #19c8fa;
+  border-bottom: 1px solid #19c8fa;
+}
+.pricing .container .plans .plan .head h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.pricing .container .plans .plan .head span {
+  font-size: 60px;
+  font-weight: 600;
+}
+.pricing .container .plans .plan .head span::after {
+  content: attr(data-Dur);
+  position: relative;
+  font-size: 25px;
+  right: -15px;
+}
+.pricing .container .plans .plan .head span::before {
+  content: attr(data-coin);
+  font-size: 25px;
+  font-weight: normal;
+  position: relative;
+  top: -40px;
+  margin-right: 15px;
+}
+.pricing .container .plans .plan ul {
+  border-bottom: 1px solid #19c8fa;
+}
+.pricing .container .plans .plan ul li {
+  padding: 20px;
+  position: relative;
+}
+.pricing .container .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  background-color: #19c8fa;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.pricing .container .plans .foot a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  border: 1px solid #19c8fa;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto;
+}
+.pricing .container .contact-text {
+  text-align: center;
+  margin: 50px 0 20px;
+  font-size: 20px;
+}
+.pricing .container .contact-link {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: #19c8fa;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.pricing .container .contact-link:hover {
+  letter-spacing: 1px;
+  background-color: rgb(142, 250, 250);
+  color: black;
+}/*# sourceMappingURL=pricing.component.css.map */

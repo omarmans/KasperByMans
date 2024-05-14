@@ -1,0 +1,97 @@
+@import "../../../shared_css/variables.scss";
+@import "../../../shared_css/classes.scss";
+
+.contact-us {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  .container {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      form {
+        flex-basis: 70%;
+        .main-input {
+          display: block;
+          padding: 20px;
+          border: 1px solid #ccc;
+          width: 100%;
+          margin-bottom: 30px;
+          &:focus {
+            outline: none;
+          }
+        }
+        textarea {
+          height: 200px;
+        }
+        input[type="submit"] {
+          background-color: $main-color;
+          color: white;
+          padding: 20px;
+          border: none;
+          display: flex;
+          margin-left: auto;
+          text-transform: uppercase;
+          transition: 0.5s;
+          cursor: pointer;
+          &:hover {
+            letter-spacing: 2px;
+            background-color: rgb(114, 212, 180);
+            color: black;
+          }
+          &:disabled {
+            cursor: no-drop;
+            background-color: red;
+          }
+        }
+      }
+      .info {
+        flex-basis: 25%;
+
+        h4 {
+          text-transform: uppercase;
+          margin-bottom: 30px;
+          font-weight: 500;
+          font-size: 18px;
+        }
+        span {
+          display: block;
+          color: #777;
+          margin-bottom: 5px;
+        }
+        h4:nth-of-type(2) {
+          margin-top: 90px;
+        }
+        address {
+          color: #777;
+          line-height: 2;
+        }
+      }
+      @media (max-width: 767px) {
+        & {
+          flex-direction: column;
+          .info {
+            order: -1;
+            text-align: center;
+            h4:nth-of-type(2) {
+              margin-top: 30px;
+            }
+
+            address {
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+input.ng-invalid.ng-touched + p {
+  transition: 0.5s;
+  width: fit-content;
+  background-color: rgb(247, 129, 129);
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid red;
+}

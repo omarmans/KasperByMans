@@ -1,0 +1,121 @@
+.main-heading {
+  text-align: center;
+}
+
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  width: 120px;
+}
+
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  bottom: -38px;
+  background-color: white;
+}
+
+.main-heading p {
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  color: #777;
+}
+
+.portfolio {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.portfolio .shuffle li {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.portfolio .shuffle li.active {
+  background-color: #19c8fa;
+  color: white;
+}
+.portfolio .img-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  overflow: hidden;
+}
+.portfolio .img-container .img-box {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (min-width: 767px) {
+  .portfolio .img-container .img-box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .portfolio .img-container .img-box {
+    flex-basis: 25%;
+  }
+}
+.portfolio .img-container .img-box img {
+  transition: 0.5s;
+  max-width: 100%;
+}
+.portfolio .img-container .img-box .caption {
+  position: absolute;
+  left: 0px;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  width: 100%;
+  transition: 0.5s;
+  bottom: -100%;
+}
+.portfolio .img-container .img-box .caption h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.portfolio .img-container .img-box .caption p {
+  color: #19c8fa;
+}
+.portfolio .img-container .img-box:hover .caption {
+  bottom: 0;
+}
+.portfolio .img-container .img-box:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.portfolio .more {
+  background-color: #19c8fa;
+  padding: 15px 20px;
+  color: white;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  margin: 30px auto;
+  text-transform: uppercase;
+}/*# sourceMappingURL=portfolio.component.css.map */

@@ -1,0 +1,60 @@
+@import "../../../shared_css/variables.scss";
+@import "../../../shared_css/classes.scss";
+
+.Statistics {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  text-align: center;
+  background-image: url(../../assets/stats.png);
+  background-size: cover;
+  position: relative;
+  transition: 3s ease-in;
+  &::before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 /70%);
+  }
+  .conatiner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    .box {
+      color: white;
+      padding: 50px;
+      background-color: $transparent-color;
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+      }
+      @media (min-width: 768px) {
+        flex-basis: 50%;
+      }
+      @media (min-width: 992px) {
+        flex-basis: 25%;
+      }
+      i {
+        //perfect
+        width: 40px;
+        height: 40px;
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: 0 auto 30px;
+      }
+      .number {
+        font-size: 50px;
+        font-weight: bold;
+        margin: 0 0 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div class="services" id="services">
+  <div class="container">
+    <app-mean-heading
+      [header]="temp.h2"
+      [pragh]="temp.pragh"
+    ></app-mean-heading>
+    <div class="serv-container">
+      <div class="serv-box" *ngFor="let box of serv_boxeS">
+        <i class="{{ box.i }}"></i>
+        <div class="text">
+          <h3>{{ box.h3 }}</h3>
+          <p>{{ box.p }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

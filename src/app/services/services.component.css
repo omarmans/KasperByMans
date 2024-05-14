@@ -1,0 +1,25 @@
+.services {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.services .container .serv-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.services .container .serv-container .serv-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.services .container .serv-container .serv-box i {
+  margin-right: 10px;
+}
+.services .container .serv-container .serv-box h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #19c8fa;
+}
+.services .container .serv-container .serv-box p {
+  line-height: 2;
+  color: #777;
+}/*# sourceMappingURL=services.component.css.map */

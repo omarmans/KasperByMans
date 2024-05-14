@@ -1,0 +1,38 @@
+<div class="portfolio" id="portfolio">
+  <div class="container">
+    <app-mean-heading
+      [header]="Portfolio.h3"
+      [pragh]="Portfolio.p"
+    ></app-mean-heading>
+    <ul class="shuffle">
+      <!-- هنا -->
+      <li
+        class="active"
+        (click)="filter('all')"
+        [class.active]="'all' === activeType"
+      >
+        All
+      </li>
+      <li (click)="filter('app')" [class.active]="activeType === 'app'">App</li>
+      <li (click)="filter('photo')" [class.active]="activeType === 'photo'">
+        Photo
+      </li>
+      <li (click)="filter('web')" [class.active]="activeType === 'web'">Web</li>
+      <li (click)="filter('print')" [class.active]="activeType === 'print'">
+        Print
+      </li>
+    </ul>
+  </div>
+  <div class="img-container">
+    <div class="img-box" *ngFor="let img of filterd_img">
+      <img src="assets/shuflle/{{ img.PH_name }}" alt="" />
+      <div class="caption">
+        <h4>{{ img.h4 }}</h4>
+        <p>{{ img.p }}</p>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="more">More</a>
+</div>
+
+<!-- [class.active]=""all" === activeType" -->

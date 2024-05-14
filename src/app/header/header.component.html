@@ -1,0 +1,22 @@
+<header id="header">
+  <div class="container">
+    <a href="" class="logo">
+      <img src="assets/logo/logo (1).png" alt="" />
+    </a>
+    <nav>
+      <i class="fas fa-bars toggle-menu" (click)="show_bar()"></i>
+      <ul [ngClass]="{ bol: shown }">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- <li><a href="#footer">footer</a></li> -->
+      </ul>
+      <div class="form">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+  </div>
+</header>

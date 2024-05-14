@@ -1,0 +1,104 @@
+@import "../../../shared_css/variables.scss";
+@import "../../../shared_css/classes.scss";
+a {
+  cursor: pointer;
+}
+.pricing {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  .container {
+    .plans {
+      display: grid;
+      grid-template-columns: repeat((auto-fill, minmax(250px, 1fr)));
+      gap: 30px;
+      .plan {
+        background-color: #fcfcfc;
+        text-align: center;
+
+        .head {
+          padding: 40px 20px;
+          border-top: 1px solid $main-color;
+          border-bottom: 1px solid $main-color;
+          h3 {
+            font-weight: normal;
+            margin-bottom: 20px;
+          }
+          span {
+            font-size: 60px;
+            font-weight: 600;
+            // position: relative;
+            &::after {
+              //   content: "/Mo";
+              content: attr(data-Dur);
+              //   position: absolute;
+              position: relative;
+              font-size: 25px;
+              right: -15px;
+            }
+
+            &::before {
+              //   content: "$";
+              content: attr(data-coin);
+              font-size: 25px;
+              font-weight: normal;
+              //   position: absolute;
+              position: relative;
+              top: -40px;
+              margin-right: 15px;
+            }
+          }
+        }
+        ul {
+          border-bottom: 1px solid $main-color;
+          li {
+            padding: 20px;
+            position: relative;
+            // &:not(:last-child) {
+            //   position: relative;
+            // }
+            &:not(:last-child)::after {
+              content: "";
+              width: 120px;
+              height: 1px;
+              background-color: $main-color;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              bottom: 0;
+            }
+          }
+        }
+      }
+      .foot {
+        a {
+          display: block;
+          padding: 20px 20px;
+          text-decoration: none;
+          border: 1px solid $main-color;
+          width: fit-content;
+          margin: 30px auto;
+        }
+      }
+    }
+    .contact-text {
+      text-align: center;
+      margin: 50px 0 20px;
+      font-size: 20px;
+    }
+    .contact-link {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      background-color: $main-color;
+      padding: 15px 30px;
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+      &:hover {
+        letter-spacing: 1px;
+        background-color: rgb(142, 250, 250);
+        color: black;
+      }
+    }
+  }
+}

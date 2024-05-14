@@ -1,0 +1,8 @@
+<button *ngIf="!show_btn; else downTemplate" class="btn">
+  <i class="fa-solid fa-arrow-up" (click)="Up()"></i>
+</button>
+<ng-template #downTemplate>
+  <button class="btn">
+    <i class="fa-solid fa-arrow-down" (click)="Down()"></i>
+  </button>
+</ng-template>

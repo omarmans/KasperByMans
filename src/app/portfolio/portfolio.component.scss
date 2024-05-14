@@ -1,0 +1,84 @@
+@import "../../../shared_css/variables.scss";
+@import "../../../shared_css/classes.scss";
+
+.portfolio {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  .shuffle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    li {
+      cursor: pointer;
+      padding: 10px;
+      margin-bottom: 30px;
+    }
+    li.active {
+      background-color: $main-color;
+      color: white;
+    }
+  }
+  .img-container {
+    display: flex;
+    flex-wrap: wrap; //عشان لو في محتوي عدا ينزل تحت
+    margin-top: 60px;
+    overflow: hidden;
+
+    .img-box {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      @media (min-width: 767px) {
+        & {
+          flex-basis: 50%;
+        }
+      }
+      @media (min-width: 1199px) {
+        & {
+          flex-basis: 25%;
+        }
+      }
+      img {
+        transition: 0.5s;
+        max-width: 100%; //عشان متطلعش برا المحتوي
+      }
+      .caption {
+        position: absolute;
+
+        left: 0px;
+        padding: 20px;
+        background-color: white;
+        color: black;
+        width: 100%;
+        transition: 0.5s;
+        bottom: -100%; //طلع برا الشاشه
+        h4 {
+          font-weight: normal;
+          margin-bottom: 10px;
+        }
+        p {
+          color: $main-color;
+        }
+      }
+      //ياخرا انت كنت عامل هوفر ع الكابشن
+      &:hover {
+        .caption {
+          bottom: 0;
+        }
+        img {
+          transform: rotate(3deg) scale(1.1);
+        }
+      }
+    }
+  }
+  .more {
+    background-color: $main-color;
+    padding: 15px 20px;
+    color: white;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    margin: 30px auto;
+    text-transform: uppercase;
+  }
+}

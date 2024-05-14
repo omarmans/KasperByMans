@@ -1,0 +1,59 @@
+<div class="contact-us" id="contact">
+  <div class="container">
+    <app-mean-heading
+      [header]="header.name"
+      [pragh]="header.p"
+    ></app-mean-heading>
+    <div class="content">
+      <form (ngSubmit)="onSub(f)" #f="ngForm">
+        <input
+          ngModel
+          type="text"
+          name="name"
+          required
+          class="main-input"
+          placeholder="You Name"
+          #name="ngModel"
+        />
+        <p *ngIf="!name.dirty && name.touched">Enter Name</p>
+        <input
+          ngModel
+          type="email"
+          name="email"
+          required
+          class="main-input"
+          placeholder="You Email"
+          #email="ngModel"
+        />
+        <p *ngIf="!email.dirty && email.touched">Your Email.</p>
+
+        <textarea
+          ngModel
+          name="text"
+          placeholder="Your Message"
+          name="msg"
+          class="main-input"
+        ></textarea>
+        <input
+          [disabled]="!f.valid"
+          type="submit"
+          value="Send Message"
+          class="bolbol"
+        />
+      </form>
+      <div class="info">
+        <!-- ممكن تعمل ديفين وعيش بكن الاصعب احسن -->
+        <h4>Get in touch</h4>
+        <span class="phone">(+20) 010 619 80 831</span>
+        <span class="phone">(+013) 320 10 27</span>
+        <h4>Where We Are</h4>
+        <address>
+          Egypt <br />
+          Qalyubiyya <br />
+          Banha <br />
+          4st Yassin Qorahb
+        </address>
+      </div>
+    </div>
+  </div>
+</div>

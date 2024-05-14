@@ -1,0 +1,23 @@
+@import "../../../shared_css/variables.scss";
+@import "../../../shared_css/classes.scss";
+
+.about {
+  padding-top: $section-padding;
+  //   padding-bottom: $section-padding; لأن الصوره هتطلع م التصميم فلذلك فاكس
+  overflow: hidden;
+  text-align: center;
+  background-color: white;
+  img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%; //عشان الشاشه متعديش الكونتنتن
+    //بص عشان الصور خرجت ف عملت مسافة ف من ثم الحل تعمل مارجن توب بنفس المساحه بس بالسالب برضو ههه
+    @media (max-width: 767px) {
+      & {
+        margin-top: -60px;
+        bottom: -60px;
+      }
+    }
+  }
+}
